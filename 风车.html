@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.wrap {
+			width: 225px;
+			height: 225px;
+			margin: 50px;
+			float: left;
+			transition: 200s;
+		}
+		.wrap div {
+			width: 100px;
+			height: 100px;
+			background:aqua;
+			float: left;
+			background-image: -webkit-linear-gradient(left top,#29d3ff,#ba18ce);
+			/* 从左上角开始渐变 */	
+		}
+		.wrap div:nth-child(1),
+		.wrap div:last-child{
+			border-radius: 12% 85%;
+		}
+		.wrap div:nth-of-type(2),
+		.wrap div:nth-last-child(2){
+			border-radius: 85% 12%;
+		}
+		body:hover .wrap {
+			-webkit-transform:rotate(360000deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

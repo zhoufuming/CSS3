@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Animate.css + wow.js</title>
+	<link rel="stylesheet" href="animate.min.css">
+	<script src="wow.min.js"></script>
+	<style>
+		div {
+			height: 60px; 
+			margin-bottom: 1000px; 
+			background: red;
+			color: white;
+			font-size: 50px;
+		}
+		#box3, #box4, #box5 {
+			display: inline-block;
+			width: 20%;
+			margin: 0 5% 1000px;
+		}
+	</style>
+	<script>
+		new WOW().init();
+	</script>
+</head>
+<body>
+	<div id="box1" class="wow animated shake" data-wow-duration="2s" data-wow-delay="0.5s">box1</div>
+	<div id="box2" class="wow animated fadeInDown">box2</div>
+	<div id="box3" class="wow animated rotateInDownLeft" data-wow-duration="1s">box3</div>
+	<div id="box4" class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1s">box4</div>
+	<div id="box5" class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="2s">box5</div>
+	<div id="box6" class="wow animated flash" data-wow-offset="500"  data-wow-iteration="10">box6</div></body>
+	<script>
+		/*初始化*/
+		new WOW().init();
+
+
+		/*也可以自定义初始化*/
+		/*var wow = new WOW({
+		    boxClass: 'wow',	// 需要执行动画的元素的 class
+		    animateClass: 'animated',	// animation.css 动画的 class
+		    offset: 0,	// 距离可视区域多少开始执行动画
+		    mobile: true,	// 是否在移动设备上执行动画
+		    live: true	// 异步加载的内容是否有效
+		});
+		wow.init();*/
+	</script>
+</html>

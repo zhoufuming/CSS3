@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			height: 300px;
+			border: 1px solid #000;
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin: 100px auto;
+			transition: 1s;
+		}
+		body:hover .box {
+			-webkit-transform: translate(100px,100px);/* 这样就不用通过定位来进行位移~~ */
+			/*-webkit-transform: translateX(100px);
+			-webkit-transform: translateY(100px);*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

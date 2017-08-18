@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			background:#000; text-align:center; font:50px/200px "微软雅黑";
+		}
+		h1{ display:inline-block;
+			color:rgba(255,255,255,0.3); 
+			background:-webkit-linear-gradient(-30deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,1) 240px,rgba(255,255,255,0) 300px) -300px 0 no-repeat; 
+			-webkit-background-clip:text;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oH1 = document.getElementsByTagName("h1")[0];
+			var oTimer = null;
+			var iLeft = 300;
+			toMove();
+			function toMove(){
+				oTimer = setInterval(function(){
+					iLeft+=10;
+					if (iLeft==1000) {
+						iLeft = -300;
+						clearInterval(oTimer);
+					}
+					oH1.style.backgroundPosition = iLeft+"px 0px";
+				},20);
+			}
+			setInterval(function(){
+				toMove();
+			},2000);
+		}
+	</script>
+</head>
+<body>
+	<h1>MiaoV课堂</h1>
+</body>
+</html>

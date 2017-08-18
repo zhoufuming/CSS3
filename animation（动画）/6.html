@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		@-webkit-keyframes move {
+			0% {
+				width: 100px;
+			}
+			100% {
+				width: 500px;
+			}
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		/* 如果想要盒子的最终样式为动画结束的样式，这需要再给盒子加上一个class */
+		.move {
+			-webkit-animation: 2s move;
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box move"></div>
+</body>
+</html>

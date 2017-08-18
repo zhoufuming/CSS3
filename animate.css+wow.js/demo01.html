@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Animate.css css3动画库</title>
+	<link rel="stylesheet" href="animate.min.css">
+	<style>
+		div {
+			height: 60px; 
+			margin-bottom: 1000px; 
+			background: red;
+			color: white;
+			font-size: 50px;
+		}
+		#box3 {
+		    -webkit-animation-duration: 3s;/* 持续时间 */
+		    -webkit-animation-delay: 1s;	/* 延迟 初始（第一次）执行才有延迟，重复执行没有延迟 */
+		  	-webkit-animation-iteration-count: 2; /* 重复次数（infinte 则无限重复） */
+
+		  	-moz-animation-duration: 3s;
+		    -moz-animation-delay: 1s;
+		  	-moz-animation-iteration-count: 2;
+
+		  	animation-duration: 3s;
+		    animation-delay: 1s;
+		  	animation-iteration-count: 2;
+		}
+	</style>
+
+	<script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div id="box1">box1</div>
+
+	<div id="box2" class="animated bounceOutLeft">box2</div>
+	<!-- 这里包括两个class名，第一个是基本的，必须添加的样式名，任何想实现的元素都得添加这个。第二个是指定的动画样式名。 -->
+
+	<div id="box3" class="animated bounce">box3</div>
+
+	<div id="box4" class="animated fadeIn infinite">box4</div>
+
+	<div id="box5" class="animated rotateInDownLeft">box5</div>
+
+	<script>
+		/*通过js动态添加*/
+		$('#box1').addClass('animated bounceOutLeft');
+
+		$('#box5').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){alert("动画完成");});
+		/*
+			webkitAnimationEnd -> webkit-animation-end
+			...
+
+		 */
+	</script>
+</body>
+</html>

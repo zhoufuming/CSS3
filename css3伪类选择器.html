@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		figure{
+			margin: 0;height: 300px;width: 300px;overflow: auto;position: relative;
+		}
+		img{
+			display: none;position: absolute;
+		}
+		img:target{
+			display: inline-block;
+		}
+		/*div{
+			width: 100px;height: 100px;background: red;display: none;
+		}
+		div:target{
+			display: block;
+		}*/
+	</style>
+</head>
+<body>
+	<a href="#img1">图一</a>
+	<a href="#img2">图二</a>
+	<a href="#img3">图三</a>
+	<a href="#img4">图四</a><br/>
+	<figure>
+		<img src="img/1-4.jpg" id="img1">
+		<img src="img/1-5.jpg" id="img2">
+		<img src="img/1-6.jpg" id="img3">	<!-- id="img3"为默认选中状态！！？百思不得骑姐啊~~ -->
+		<img src="img/1-7.jpg" id="img4">
+	</figure>
+	<!-- <a href="#div1">div1</a>
+	<a href="#div2">div2</a>
+	<div id="div1">div1</div>
+	<div id="div2">div2</div> -->
+</body>
+</html>

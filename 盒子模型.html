@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+		}
+		.box{
+			height: 100%;/*border: 3px solid black;*/padding: 5px;display: -webkit-box;/*-webkit-box-orient:vertical;*/-webkit-box-direction:Reverse;-webkit-box-pack:Justify;
+			-webkit-box-align:center;
+			/* display: -webkit-box; 实现类似左浮动的效果 -webkit  网站的前缀
+				-webkit-box-orient:vertical; 垂直方向布局
+				-webkit-box-direction:Reverse;  元素排列顺序：倒序
+				-webkit-box-pack:center;   富裕空间在两侧 子元素则在中间显示
+				-webkit-box-pack:Start;		富裕空间在右侧 子元素则在左侧显示
+				-webkit-box-pack:End;		富裕空间在左侧 子元素则在右侧显示
+				-webkit-box-pack:Justify;   富裕空间在子元素之间平均分布
+				-webkit-box-align:center;    子元素在垂直方向上居中
+				-webkit-box-align:Start;    子元素在垂直方向上居顶
+				-webkit-box-align:End;    子元素在垂直方向上居底
+			*/
+		}
+		.box div{
+			width: 100px;height: 100px;background: red;border: 1px solid white;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+		<div class="div5">5</div>
+	</div>
+</body>
+</html>

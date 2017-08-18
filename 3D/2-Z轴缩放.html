@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.wrap {
+			width: 100px;
+			height: 100px;
+			padding: 100px;
+			border: 5px solid #000;
+			margin: 30px auto;
+			-webkit-transform-style: preserve-3d;	/* 构造3D空间 */ 
+			-webkit-perspective: 200px; /* 景深，数值越小，越明显 */
+
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: 1s;
+		}
+		.wrap:hover div {
+			/*-webkit-transform: translateZ(-100px);*/
+			-webkit-transform: translateZ(100px);	
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">我的子元素div</div>
+	</div>
+</body>
+</html>

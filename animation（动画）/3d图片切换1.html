@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		@-webkit-keyframes show {
+			0% {
+				-webkit-transform: rotateX(180deg);
+				opacity: 0;
+			}
+			100% {
+				-webkit-transform: rotateX(0deg);
+				opacity: 1;
+			}
+		}
+		@-webkit-keyframes hide {
+			0% {
+				-webkit-transform: rotateX(0deg);
+				opacity: 1;
+			}
+			100% {
+				-webkit-transform: rotateX(-180deg);
+				opacity: 0  ;
+			}
+		}
+		#wrap {
+			width: 600px;
+			height: 300px;
+			position: relative;
+			margin: 50px auto;
+			-webkit-perspective: 800px;
+			-webkit-transform-style:preserve-3d ;
+		}
+		img {
+			width: 600px;
+			height: 300px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-transform-origin: bottom;
+			-webkit-transform: rotateX(-180deg);
+			opacity: 0;
+		}
+		#wrap input {
+			width: 50px;
+			height: 50px;
+			margin: 0;
+			padding: 0;
+			background: #ccc;
+			position: absolute; 
+			top: 100px;
+			border-radius: 50%;
+			color: white;
+			outline: none;
+		}
+		#wrap input:nth-of-type(1){
+			left: -100px;
+		}
+		#wrap input:nth-of-type(2){
+			right: -100px;
+		}
+		.show {
+			-webkit-transform: rotateX(0deg);
+			opacity: 1;
+			-webkit-animation:1s show;
+		}
+		.hide {
+			-webkit-transform: rotateX(180deg);
+			opacity: 0;
+			-webkit-animation:0.6s hide;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oWrap = document.getElementById("wrap");
+			var aBtn  = oWrap.getElementsByTagName("input");
+			var aImg = oWrap.getElementsByTagName("img");
+			var iNow = 0;
+			aBtn[1].onclick=function(){
+				aImg[iNow].className = "hide";
+				iNow++;
+				if (iNow>aImg.length-1) {
+					iNow=0;
+				}
+				aImg[iNow].className = "show";
+ 			}
+ 			aBtn[0].onclick=function(){
+				aImg[iNow].className = "hide";
+				iNow--;
+				if (iNow<0) {
+					iNow=aImg.length-1;
+				}
+				aImg[iNow].className = "show";
+ 			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<input type="button" n ame="" value="上一张">
+		<img src="../img/3-1.jpg" alt="pic" class="show">
+		<img src="../img/3-2.jpg" alt="pic">
+		<img src="../img/3-3.jpg" alt="pic">
+		<img src="../img/3-4.jpg" alt="pic">
+		<img src="../img/3-5.jpg" alt="pic">
+		<input type="button" name="" value="下一张">
+	</div>
+</body>
+</html>

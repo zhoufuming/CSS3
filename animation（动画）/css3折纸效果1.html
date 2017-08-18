@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		@-webkit-keyframes open {
+			0% {
+				-webkit-transform:rotateX(-120deg);
+			}
+			25% {
+				-webkit-transform:rotateX(30deg);
+			}
+			50% {
+				-webkit-transform:rotateX(-15deg);
+			}
+			75% {
+				-webkit-transform:rotateX(8deg);
+			}
+			100% {
+				-webkit-transform:rotateX(0deg);
+			}
+		}
+		#wrap {
+			width: 160px;
+			margin: 30px auto;
+			-webkit-perspective: 800px;
+			-webkit-transform-style: preserve-3d;
+			position: relative;
+		}
+		#wrap h2 {
+			height: 40px;
+			background: #f60;
+			color: #fff;
+			font: bold 16px/40px "微软雅黑";
+			text-align: center;
+			margin: 0; 
+			z-index: 10;
+			position: relative;
+		}
+		#wrap div {
+			position: absolute;
+			top: 32px;
+			width: 100%;
+			left: 0;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform-origin:top;
+			-webkit-transform: rotateX(-120deg);
+		}	
+		#wrap span {
+			display: block;
+			height: 30px;
+			background: #9f0;
+			font: 12px/30px "宋体";
+			color: white;
+			text-indent: 20px;
+		}
+		#wrap>div {
+			top: 40px;
+
+		}
+		#wrap .show {
+			-webkit-animation: 2s open ease;
+			-webkit-transform: rotateX(0deg);
+		}
+		#btn {
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" name="" value="展开" id="btn" />
+	<div id="wrap">
+		<h2>我是标题</h2>
+		<div>
+			<span>选项一</span>
+			<div>
+				<span>选项二</span>
+				<div>
+					<span>选项三</span>
+					<div>
+						<span>选项四</span>
+						<div>
+							<span>选项五</span>
+							<div>
+								<span>选项六</span>
+								<div>
+									<span>选项七</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	var oBtn = document.getElementById("btn");
+	var oWrap = document.getElementById("wrap");
+	var aDiv = oWrap.getElementsByTagName("div");
+	oBtn.onclick=function(){
+		for (var i = 0; i < aDiv.length; i++) {
+			aDiv[i].className="show";
+		}
+	}
+</script>
+</body>
+
+</html>
